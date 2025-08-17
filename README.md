@@ -20,8 +20,7 @@ Các tính năng khác (dashboard cho Instructor/Student, quản lý học sinh,
 
 ### 1. Clone dự án
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/lthanhnghia/ManagementFE.git
 
 npm install ở terminal để cài đặt các thư viện cần thiết
 npm start là để chạy project
