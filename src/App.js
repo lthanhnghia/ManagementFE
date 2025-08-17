@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import {
+  RouterProvider,
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import InsTructTor from './pages/Instructor'; 
+import Student from './pages/Student';
+import Login from './pages/Login';
+import OTP from './pages/Otp';
 function App() {
+   const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" >
+        <Route path="/instructtor" element={<InsTructTor />}/>
+           <Route path="/student" element={<Student />}/>
+           <Route path="/login" element={<Login />}/>
+            <Route path="/otp/:phone" element={<OTP />}/>
+          {/* <Route path="booking" element={<Booking />} /> */}
+          {/* <Route path="testimonial" element={<Testimonial />} /> */}
+          
+        
+      </Route>
+    )
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   );
 }
 
