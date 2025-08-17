@@ -13,10 +13,12 @@ import InsTructTor from './pages/Instructor';
 import Student from './pages/Student';
 import Login from './pages/Login';
 import OTP from './pages/Otp';
+import { Navigate } from 'react-router-dom';
 function App() {
    const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" >
+        <Route index element={<Navigate to="/login" />} />
         <Route path="/instructtor" element={<InsTructTor />}/>
            <Route path="/student" element={<Student />}/>
            <Route path="/login" element={<Login />}/>
