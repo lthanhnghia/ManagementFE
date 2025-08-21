@@ -1,7 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import ManageStudent from "./pageInsTructTor/manageStudents";
-import ManageLessons from "./pageInsTructTor/manageLessons";
+import ManageLessons from "../components/pageInsTructTor/manageLessons";
+import ManageStudent from "../components/pageInsTructTor/manageStudents";
 const InsTructTor = () => {
     return (
         <div className="container">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import avatar from "../../assets/avatarImage.jpg";
+
 import ModalsLession from "../../components/lessionModal";
 
 const students = [
